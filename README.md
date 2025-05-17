@@ -1,2 +1,0 @@
-# textile
-Textile parser
