@@ -1,38 +1,46 @@
 {
-	"name": "@lwe8/textile",
-	"version": "0.3.0",
-	"description": "Textile parser",
-	"scripts": {
-		"build": "tsc",
-		"check": "biome check src --write",
-		"format": "biome format src --write"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/lwe8/textile.git"
-	},
-	"keywords": ["Textile"],
-	"author": "Pho Thin Mg <phothinmg@disroot.org>",
-	"license": "Apache-2.0",
-	"bugs": {
-		"url": "https://github.com/lwe8/textile/issues"
-	},
-	"homepage": "https://github.com/lwe8/textile#readme",
-	"type": "module",
-	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"@types/node": "^22.15.18",
-		"typescript": "^5.8.3"
-	},
-	"dependencies": {
-		"@lwe8/textile-js": "^0.2.1",
-		"@types/hast": "^3.0.4",
-		"hast-util-from-html": "^2.0.3",
-		"hast-util-to-html": "^9.0.5",
-		"unist-util-visit": "^5.0.0"
-	},
-	"publishConfig": {
-		"provenance": true,
-		"access": "public"
-	}
+  "name": "@lwe8/textile",
+  "version": "0.3.0",
+  "description": "Textile parser",
+  "scripts": {
+    "build": "tsc",
+    "check": "biome check src --write",
+    "format": "biome format src --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lwe8/textile.git"
+  },
+  "keywords": [
+    "Textile"
+  ],
+  "author": "Pho Thin Mg <phothinmg@disroot.org>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/lwe8/textile/issues"
+  },
+  "homepage": "https://github.com/lwe8/textile#readme",
+  "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.15.18",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@lwe8/textile-js": "^0.2.1",
+    "@types/hast": "^3.0.4",
+    "hast-util-from-html": "^2.0.3",
+    "hast-util-to-html": "^9.0.5",
+    "unist-util-visit": "^5.0.0"
+  },
+  "publishConfig": {
+    "provenance": true,
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  }
 }
