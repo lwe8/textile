@@ -27,8 +27,8 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@lwe8/text-types": "^1.0.0",
     "@lwe8/textile-js": "^0.2.1",
-    "@types/hast": "^3.0.4",
     "hast-util-from-html": "^2.0.3",
     "hast-util-to-html": "^9.0.5",
     "unist-util-visit": "^5.0.0"
