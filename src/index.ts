@@ -11,7 +11,9 @@ import { visit } from "unist-util-visit";
 
 //
 const textile = new TextileJs();
-
+export interface Options {
+  breaks?: boolean;
+}
 //
 function treeWalk(tree: Root, callback: TextileVisitor) {
   visit(tree, callback);
@@ -23,19 +25,21 @@ export default class Textile {
   private _html: string;
   private _text: string;
   private _visitors: TextileVisitor[];
+  private _breaks: boolean;
 
-  constructor() {
+  constructor(options?: Options) {
     this._extensions = [];
     this._tree = {};
     this._html = "";
     this._text = "";
     this._visitors = [];
+    this._breaks = options?.breaks ?? false;
   }
   private _int() {
     if (this._text === "") {
       throw new Error("You must input text to convert");
     }
-    const _html = textile.parse(this._text);
+    const _html = textile.parse(this._text, { breaks: this._breaks });
     this._tree = fromHtml(_html, { fragment: true });
     if (this._extensions.length > 0) {
       for (const ext of this._extensions) {
