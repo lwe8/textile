@@ -141,3 +141,4 @@ vite.config.ts.timestamp-*
 a.js
 a.html
 a.textile 
+dist

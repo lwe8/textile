@@ -4,17 +4,29 @@
   "description": "Textile Parser",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./build.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lwe8/textile.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "<phothinmg@disroot.org>",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/lwe8/textile/issues"
   },
-  "homepage": "https://github.com/lwe8/textile#readme"
+  "homepage": "https://github.com/lwe8/textile#readme",
+  "devDependencies": {
+    "@babel/core": "^7.27.7",
+    "@babel/preset-env": "^7.27.2",
+    "@types/node": "^24.0.6",
+    "babel-loader": "^10.0.0",
+    "typescript": "^5.8.3",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "htmlparser2": "^10.0.0"
+  }
 }
